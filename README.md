@@ -1,24 +1,37 @@
-# README
+# <Music garden>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
 
-Things you may want to cover:
+<様々なユーザーとお気に入りの曲をシェアするサイト>
 
-* Ruby version
+### サイトテーマ
 
-* System dependencies
+<自分のお気に入りの曲のシェア>
 
-* Configuration
+### テーマを選んだ理由
 
-* Database creation
+<音楽が好きでそれをシェアして話したり、聞いたことのない曲を知りたいとき、好きなジャンルでしか自分は調べないので、もっと知りたいと思いそのような場があれば良いなと思いました。>
 
-* Database initialization
+### ターゲットユーザ
 
-* How to run the test suite
+<音楽好きな人全員>
 
-* Services (job queues, cache servers, search engines, etc.)
+### 主な利用シーン
 
-* Deployment instructions
+<好きな音楽をシェアしたいとき、まだ知らない曲を知りたい時。>
 
-* ...
+## 設計書
+
+<...>
+
+## チャレンジ要素一覧
+
+<https://docs.google.com/spreadsheets/d/146nad0_OluEpvHEC9U5OVKvSZCfGPeGI95phj6Y9JYA/edit?usp=sharing>
+
+## 開発環境
+
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JS ライブラリ：jQuery
+- IDE：Cloud9
