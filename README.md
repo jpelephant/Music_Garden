@@ -1,4 +1,6 @@
-# <Music garden>
+## アプリ名
+
+<Music garden>
 
 ## サイト概要
 
