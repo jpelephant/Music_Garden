@@ -1,24 +1,40 @@
-# README
+# Music garden
+  
+## サイト概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+レビューサイト
+ジャンルを問わずお気に入りの曲や新曲などをレビューしシェアするサイト。
+一覧ページからジャンル問わず様々なレビューを見て曲を探したり、タグや検索から気分に合いそうな曲を探したりし、自分の知らない新しい曲に出会ってを考えています。
 
-Things you may want to cover:
+### サイトテーマ
 
-* Ruby version
+お気に入りの曲のレビューのシェア、新しいジャンルとの出会い。
 
-* System dependencies
+### テーマを選んだ理由
 
-* Configuration
+音楽が好きでそれをシェアして話したり、聞いたことのない曲を知りたいとき、好きなジャンルでしか自分は調べないので、もっと知りたいと思いそのような場があれば良いなと思い作成しようと思いました。
+今、kpop jpop　洋楽　ビートボックス　ラップ　など様々な音楽などが広がっていてスマホなどで音楽を聴く機会が増えていると思います。そんな世の中でお気に入りのジャンルだけではなく幅広くたくさんの曲に出会えればもっと音楽が盛んになると思い作成しようと思いました。
 
-* Database creation
+### ターゲットユーザ
 
-* Database initialization
+音楽好きな人全員.
 
-* How to run the test suite
+### 主な利用シーン
 
-* Services (job queues, cache servers, search engines, etc.)
+好きな音楽をシェアしたいとき、まだ知らない曲を知りたい時。
 
-* Deployment instructions
+## 設計書
 
-* ...
+<...>
+
+## チャレンジ要素一覧
+
+<https://docs.google.com/spreadsheets/d/146nad0_OluEpvHEC9U5OVKvSZCfGPeGI95phj6Y9JYA/edit?usp=sharing>
+
+## 開発環境
+
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JS ライブラリ：jQuery
+- IDE：Cloud9
