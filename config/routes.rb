@@ -7,16 +7,16 @@ Rails.application.routes.draw do
     resources :customers, only: [:show, :edit, :update]
     resources :reviews
     get 'reviews', to: 'reviews#search'
-    get 'reviews', to: 'reviews/choice'
-    get 'reviews', to: 'reviews/select'
+    get 'reviews', to: 'reviews/tag'
+    get 'reviews', to: 'reviews/tag_index'
     resources :favorite, only: [:index, :create, :destroy]
   end
   namespace :admin do
     resources :reviews
     get 'reviews', to: 'reviews#search'
-    get 'reviews', to: 'reviews/choice'
-    get 'reviews', to: 'reviews/select'
-    
+    get 'reviews', to: 'reviews/tag'
+    get 'reviews', to: 'reviews/tag_index'
+
     resources :customers, except: [:new, :create, :des]
   end
 
