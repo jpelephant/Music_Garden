@@ -7,9 +7,16 @@ class Customer::ReviewsController < ApplicationController
   end
 
   def new
+    @reviwe = Review.new
   end
 
   def create
+    @review = Review.new(reviwe_params)
+    if @review.save
+      redirect_to reviews_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -30,4 +37,9 @@ class Customer::ReviewsController < ApplicationController
   def tag_index
   end
   
+  private 
+  
+  def review_params
+    params.require(:review).permit(:name, :heading, :year, :group_name, :member, :comment, :rate)
+  end
 end
