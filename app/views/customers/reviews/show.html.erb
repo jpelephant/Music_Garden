@@ -1,4 +1,18 @@
-<h2>曲詳細</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>曲詳細</h2>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <% if current_customer %>
+      <%= link_to "編集する" edit_review_path(@reviwe) %>
+      <% else%>
+      <%= %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 <div class="container">
   <div class="row">
@@ -41,7 +55,13 @@
         <th>投稿者</th>
       </tr>
       <tr>
-        <td><%= @customer.nickname %>さん</td>
+        <td>
+          <% if @cutomer %>
+          <%= @customer.nickname %>さん
+          <% else %>
+          <%= @admin.nickname %>さん
+          <% end %>
+        </td>
       </tr>
     </table>
   </div>

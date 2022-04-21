@@ -22,6 +22,7 @@ class Customer::ReviewsController < ApplicationController
   end
 
   def edit
+    @reviwe = Reviwe.find(params[:id])
   end
 
   def update
