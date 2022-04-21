@@ -1,0 +1,48 @@
+<h2>曲詳細</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <table>
+        <tr>
+          <th>曲名</th>
+          <td><%= @reviwe.name %></td>
+        </tr>
+        <tr>
+          <th>リリース</th>
+          <td><%= @reviwe.year %></td>
+        </tr>
+        <tr>
+          <th>グループ名</th>
+          <td><%= @review.group_name %></td>
+        </tr>
+        <tr>
+          <th>メンバー</th>
+          <td><%= @reviwe.member %></td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      <table>
+        <tr>
+          <th>感想</th>
+        </tr>
+        <tr>
+          <td><%= @review.comment %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="col-md-9"></div>
+  <div class="col-md-3">
+    <table>
+      <tr>
+        <th>投稿者</th>
+      </tr>
+      <tr>
+        <td><%= @customer.nickname %>さん</td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -5,6 +5,7 @@ class Customer::ReviewsController < ApplicationController
   end
 
   def show
+    @reviwe = Reviwe.find(params[:id])
   end
 
   def new
@@ -37,9 +38,9 @@ class Customer::ReviewsController < ApplicationController
 
   def tag_index
   end
-  
-  private 
-  
+
+  private
+
   def review_params
     params.require(:review).permit(:name, :heading, :year, :group_name, :member, :comment, :rate)
   end
