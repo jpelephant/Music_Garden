@@ -32,6 +32,9 @@ class Customer::ReviewsController < ApplicationController
   end
 
   def destroy
+    reviwe = Reviwe.find(params[:id])
+    reviwe.destroy
+    redirect_to reviwes_path
   end
 
   def search
