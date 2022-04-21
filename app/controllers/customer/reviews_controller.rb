@@ -26,6 +26,9 @@ class Customer::ReviewsController < ApplicationController
   end
 
   def update
+    review = Review.find(params[:id])
+    review.update(reviwe_params)
+    redirect_to reviwe_path(reviwe)
   end
 
   def destroy

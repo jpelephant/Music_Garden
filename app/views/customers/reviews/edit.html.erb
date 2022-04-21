@@ -1,2 +1,55 @@
-<h2>レビューの編集画面</h2>
-
+<div class="container">
+ <div class="row">
+  <div class="col-md-4">
+   <h2>レビューの編集画面</h2>
+  </div>
+  <div class="col-md-4"></div>
+  <div class="vol-md-4">
+    <%= link_to "削除する", review_path(@review), method: :delete %>
+  </div>
+ </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="table">
+        <%= form_with model: @review,url: review_path local:true do |f| %>
+        <tr>
+          <th>曲名</th>
+          <td><%= f.text_field :name %></td>
+        </tr>
+        <tr>
+          <th>一言で表すと</th>
+          <td><%= f.text_field :heading %></td>
+        </tr>
+        <tr>
+          <th>リリース</th>
+          <td><%= f.date_select :year, discard_year %></td>
+        </tr>
+        <tr>
+          <th>グループ名</th>
+          <td><%= f.text_field :group_name %></td>
+        </tr>
+        <tr>
+          <th>メンバー</th>
+          <td><%= f.text_field :member %></td>
+        </tr>
+        <tr>
+          <th>感想　どんな曲か</th>
+          <td><%= f.text_area :comment %></td>
+        </tr>
+        <tr>
+          <th>おすすめ度</th>
+        </tr>
+        <%= f.submit '保存する' %>
+        <% end %>
+        <script>
+          $('#evaluate_stars').raty({
+            starOn: "<%= asset_path('star-on.png') %>",
+            starOff: "<%= asset_path('star-off.png') %>",
+            starHalf: "<%= asset_path('star-half.png') %>",
+            scoreName: 'review[rate]'
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
