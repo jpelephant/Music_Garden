@@ -1,0 +1,40 @@
+<h2>マイページの編集画面</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <%= form_with model:@customer,local:true do |f| %>
+      <table>
+        <tr>
+          <th>氏名</th>
+          <td><%= f.text_field :first_name %></td>
+          <td><%= f.text_field :last_name %></td>
+        </tr>
+        <tr>
+          <th>フリガナ</th>
+          <td><%= f.text_field :first_name_kana %></td>
+          <td><%= f.text_field :last_name_kana %></td>
+        </tr>
+        <tr>
+          <th>ニックネーム</th>
+          <td><%= f.text_field :nickname %></td>
+        </tr>
+        <tr>
+          <th>誕生日</th>
+          <td><%= f.f.date_select :birth_date, use_month_numbers: true,start_year: 1930, end_year: (Time.now.year - 1), default: Date.new(2000, 1, 1) %></td>
+        </tr>
+        <tr>
+          <th>メールアドレス</th>
+          <td><%= f.text_field :email %></td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-12">
+      <center>
+        <%= f.submit "変更を保存する" %>
+        <% end %>
+      </center>
+    </div>
+  </div>
+</div>
