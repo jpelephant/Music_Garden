@@ -2,7 +2,7 @@
 <h2>新規登録</h2>
 
   <%= form_with model: @customer,url: customer_registration_path, local: true do |f|%>
-  <%= render "customers/shared/error_messages", resource: resource %>
+  <%= render "customer/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :email, "メールアドレス" %><br />
@@ -53,5 +53,5 @@
   </div>
 <% end %>
 <p>
-  <%= render "customers/shared/links" %>はこちらから
+  <%= link_to '新規登録', new_customer_session_path %>はこちらから
 </p>
