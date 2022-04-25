@@ -1,7 +1,7 @@
 class Customer::ReviewsController < ApplicationController
 
   def index
-    @reviwes = Reviwe.all..page(params[:page]).per(8)
+    @reviews = Review.all.page(params[:page]).per(8)
   end
 
   def show
