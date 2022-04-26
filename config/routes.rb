@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :admins do
+    get 'admin/show'
+    get 'admin/edit'
+    get 'admin/update'
+  end
   devise_for :admins
   devise_for :customer
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

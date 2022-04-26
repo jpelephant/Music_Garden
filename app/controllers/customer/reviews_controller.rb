@@ -5,11 +5,11 @@ class Customer::ReviewsController < ApplicationController
   end
 
   def show
-    @reviwe = Reviwe.find(params[:id])
+    @review = Review.find(params[:id])
   end
 
   def new
-    @reviwe = Review.new
+    @review = Review.new
   end
 
   def create
@@ -22,7 +22,7 @@ class Customer::ReviewsController < ApplicationController
   end
 
   def edit
-    @reviwe = Reviwe.find(params[:id])
+    @review = Review.find(params[:id])
   end
 
   def update

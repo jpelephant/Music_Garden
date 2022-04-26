@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="table">
-        <%= form_with model: @review,url: reviews_path local:true do |f| %>
+        <%= form_with model: @review,url: reviews_path, local:true do |f| %>
         <tr>
           <th>曲名</th>
           <td><%= f.text_field :name %></td>
@@ -14,7 +14,7 @@
         </tr>
         <tr>
           <th>リリース</th>
-          <td><%= f.date_select :year, discard_year %></td>
+          <td><%= f.date_select :year, {:discard_year => true} %></td>
         </tr>
         <tr>
           <th>グループ名</th>

@@ -1,20 +1,22 @@
-<h1>曲紹介画面</h1>
+<h3>曲紹介画面</h3>
+
+<%= link_to "新規登録", new_review_path %>
 
 <div class="container">
   <div class="row">
     <div class="col-md-4"></div>
     <div class="col-lg-3 col-md-4 mb-12">
-      <%= @reviwes.each do |reviwe| %>
+      <% @reviews.each do |review| %>
       <table>
         <tr>
-          <th><%= reviwe.name %></th>
-          <td><%= reviwe.year %></td>
+          <th><%= review.name %></th>
+          <td><%= review.year %></td>
         </tr>
         <tr>
-          <th><%= reviwe.heading %></th>
+          <th><%= review.heading %></th>
         </tr>
         <tr>
-          <td class="reviwe-rate" data-score="<%= reviwe.rate %>"></td>
+          <td class="reviwe-rate" data-score="<%= f.rate %>"></td>
         </tr>
       </table>
       <% end %>
@@ -30,6 +32,6 @@
     </div>
   </div>
   <p class="text-center">
-    <%= paginate @reviwes %>
+    <%= paginate @reviews %>
   </p>
 </div>
