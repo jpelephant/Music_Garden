@@ -18,11 +18,11 @@ Rails.application.routes.draw do
   end
   namespace :admin do
     resources :reviews
+    resources :admins, only: [:show, :edit, :update]
     get 'reviews', to: 'reviews#search'
     get 'reviews', to: 'reviews/tag'
     get 'reviews', to: 'reviews/tag_index'
-
-    resources :customers, except: [:new, :create, :des]
+    resources :customers, except: [:new, :create, :destroy]
   end
 
 end
