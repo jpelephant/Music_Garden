@@ -1,9 +1,11 @@
 class Admin::ReviewsController < ApplicationController
   
   def index
+    @reviews = Review.all.page(params[:page]).per(8)
   end
   
   def show
+    
   end
   
   def new

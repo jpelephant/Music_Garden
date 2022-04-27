@@ -1,0 +1,37 @@
+<h3>レビュー一覧</h3>
+
+<%= link_to "新規登録", new_admin_review_path %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-lg-3 col-md-4 mb-12">
+      <% @reviews.each do |review| %>
+      <table>
+        <tr>
+          <th><%= review.name %></th>
+          <td><%= review.year %></td>
+        </tr>
+        <tr>
+          <th><%= review.heading %></th>
+        </tr>
+        <tr>
+          <td class="reviwe-rate" data-score="<%= f.rate %>"></td>
+        </tr>
+      </table>
+      <% end %>
+      <script>
+        $('.reviwe-rate').raty({
+          readOnly: true,
+          score: function() {
+            return $(this).attr('data-score');
+          },
+          path: '/assets/'
+        });
+      </script>
+    </div>
+  </div>
+  <p class="text-center">
+    <%= paginate @reviews %>
+  </p>
+</div>
