@@ -1,21 +1,14 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <h2>曲詳細</h2>
-    </div>
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-      <% if current_customer %>
-      <%= link_to "編集する", edit_review_path(@reviwe) %>
-      <% else%>
-      <%= %>
-      <% end %>
-    </div>
-  </div>
-</div>
+<h3>レビューの詳細</h3>
 
 <div class="container">
   <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <%= link_to "編集画面", admin_review_path(@review) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
     <div class="col-md-4">
       <table>
         <tr>
@@ -47,10 +40,9 @@
         </tr>
       </table>
     </div>
-  </div>
-  <div class="col-md-9"></div>
-  <div class="col-md-3">
-    <table>
+    <div class="col-md-9"></div>
+    <div class="col-md-3">
+      <table>
       <tr>
         <th>投稿者</th>
       </tr>
@@ -60,9 +52,9 @@
           <%= @review.customer.nickname %>さん
           <% else %>
           <%= @review.admin.nickname %>さん
-          <% end %>
         </td>
       </tr>
     </table>
+    </div>
   </div>
 </div>
