@@ -13,7 +13,7 @@ class Customer::ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(reviwe_params)
+    @review = Review.new(review_params)
     if @review.save
       redirect_to reviews_path
     else
@@ -27,14 +27,14 @@ class Customer::ReviewsController < ApplicationController
 
   def update
     review = Review.find(params[:id])
-    review.update(reviwe_params)
-    redirect_to reviwe_path(reviwe)
+    review.update(review_params)
+    redirect_to review_path(review)
   end
 
   def destroy
-    reviwe = Reviwe.find(params[:id])
-    reviwe.destroy
-    redirect_to reviwes_path
+    review = Review.find(params[:id])
+    review.destroy
+    redirect_to reviews_path
   end
 
   def search
