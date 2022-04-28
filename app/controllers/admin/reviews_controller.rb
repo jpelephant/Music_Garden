@@ -15,6 +15,7 @@ class Admin::ReviewsController < ApplicationController
   end
 
   def edit
+    @review = Review.find(params[:id])
   end
   
   def update
@@ -32,4 +33,8 @@ class Admin::ReviewsController < ApplicationController
   def tag_index
   end
   
+  private
+  def review_params
+    params.require(:review).permit(:name, :heading, :year, :group_name, :member, :comment, :rate)
+  end
 end
