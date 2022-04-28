@@ -11,7 +11,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="table">
-        <%= form_with model: @review,url: review_path local:true do |f| %>
+        <%= form_with model: @review,url: admin_review_path local:true do |f| %>
         <tr>
           <th>曲名</th>
           <td><%= f.text_field :name %></td>
